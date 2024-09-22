@@ -1,0 +1,145 @@
+/* General page styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header container */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e4a6f;
+    padding: 20px;
+}
+
+/* Profile picture */
+header img {
+    border-radius: 5%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid white;
+}
+
+/* Header text */
+.header-text h1 {
+    font-size: 2rem;
+    color: white;
+    margin-left: 20px;
+}
+
+/* Full-width navigation bar */
+nav {
+    background-color: #1c1c1c;
+    /* Dark background color */
+    padding: 0;
+    width: 100vw;
+    /* Full width of the viewport */
+    position: relative;
+    /* Ensures the nav stays positioned properly */
+    left: 0;
+    /* Align to the left of the page */
+}
+
+/* Navigation list */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Horizontal layout */
+    justify-content: space-around;
+    /* Spread the items evenly across the bar */
+}
+
+/* Navigation items */
+nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #fff;
+    /* White text color */
+    text-decoration: none;
+    /* Remove underline */
+    background-color: #1d1c1c;
+    /* Default background color for nav items */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #74bbc0;
+    /* Hover background color */
+    color: #fff;
+    /* Keep the text white on hover */
+}
+
+/* Active/current page link */
+nav a.active {
+    background-color: #272120;
+    /* Different color for the active page */
+}
+
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Title container */
+.title-container {
+    grid-column: span 2;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.title-container h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.title-container hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    width: 50%;
+    margin: 10px auto;
+}
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    background-color: #2e4a6f;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2e4a6f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}

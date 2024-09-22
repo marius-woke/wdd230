@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development course assignment portal by Ekwulonu Marius Woke. Explore projects and assignments for the course." />
+    <title>Ekwulonu Marius Woke - WDD 230 - Web Frontend Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/profile_pic.jpg" alt="Ekwulonu Marius Woke Profile Image" class="profile-pic">
+            <div class="header-text">
+                <h1>Ekwulonu Marius Woke</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#assignments">Chamber</a></li>
+            <li><a href="#projects">Site Plan</a></li>
+            <li><a href="#contact">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="title-container">
+            <h1>WDD 230: Web Frontend Development</h1>
+            <hr>
+        </div>
+
+        <section class="card">
+            <h2>Learning Activities</h2>
+            <ul>
+                <li><a href="#activity1">Activity 1: HTML Basics</a></li>
+                <li><a href="#activity2">Activity 2: CSS Styling</a></li>
+                <li><a href="#activity3">Activity 3: JavaScript Introduction</a></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Information</h2>
+            <p>Weather: 🌞 Sunny, 75°F</p>
+            <p>Page Visits: 15</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span>&#x1F338; Ekwulonu Marius Woke &#x1F338; Rexburg, Idaho, USA</p>
+        <p id="lastModified">Last modified: <span id="modifiedDate"></span></p>
+    </footer>
+
+
+    <script src="scripts/getDates.js"></script>
+</body>
+
+</html>
