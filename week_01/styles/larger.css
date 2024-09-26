@@ -1,0 +1,25 @@
+/* Larger screen layout */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        /* Two columns on larger screens */
+        gap: 20px;
+    }
+
+    /* Title container should span two columns on larger screens */
+    .title-container {
+        grid-column: span 2;
+    }
+
+    /* Larger screen layout */
+    nav ul {
+        flex-direction: row;
+        /* Stack horizontally on larger screens */
+        justify-content: space-around;
+    }
+
+    nav a {
+        padding: 1rem 1.5rem;
+        /* Adjust padding for larger screens */
+    }
+}

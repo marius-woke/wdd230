@@ -33,14 +33,10 @@ header img {
 /* Full-width navigation bar */
 nav {
     background-color: #1c1c1c;
-    /* Dark background color */
     padding: 0;
     width: 100vw;
-    /* Full width of the viewport */
     position: relative;
-    /* Ensures the nav stays positioned properly */
     left: 0;
-    /* Align to the left of the page */
 }
 
 /* Navigation list */
@@ -49,9 +45,9 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    /* Horizontal layout */
-    justify-content: space-around;
-    /* Spread the items evenly across the bar */
+    flex-direction: column;
+    /* Stack vertically on small screens */
+    align-items: center;
 }
 
 /* Navigation items */
@@ -59,43 +55,38 @@ nav a {
     display: block;
     padding: 1rem 2rem;
     color: #fff;
-    /* White text color */
     text-decoration: none;
-    /* Remove underline */
     background-color: #1d1c1c;
-    /* Default background color for nav items */
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Smooth transition */
 }
 
 /* Hover effect */
 nav a:hover {
     background-color: #74bbc0;
-    /* Hover background color */
     color: #fff;
-    /* Keep the text white on hover */
 }
 
 /* Active/current page link */
 nav a.active {
     background-color: #272120;
-    /* Different color for the active page */
 }
 
-
-/* Main content */
 main {
     max-width: 900px;
     margin: 20px auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* Use CSS Grid */
+    grid-template-columns: 1fr;
+    /* One column for small screens */
     gap: 20px;
+    /* Space between sections */
 }
+
 
 /* Title container */
 .title-container {
-    grid-column: span 2;
+    grid-column: 1;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -120,6 +111,7 @@ main {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .card h2 {
