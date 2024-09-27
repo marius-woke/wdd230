@@ -36,7 +36,54 @@ nav {
     padding: 0;
     width: 100vw;
     position: relative;
-    left: 0;
+}
+
+/* ham menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    display: none;
+    /* Hide by default */
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #6F86FF;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* Navigation list */
@@ -46,7 +93,6 @@ nav ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    /* Stack vertically on small screens */
     align-items: center;
 }
 
@@ -71,18 +117,31 @@ nav a.active {
     background-color: #272120;
 }
 
+/* Hide the navigation links by default on mobile */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically on small screens */
+    align-items: center;
+}
+
+/* Show navigation links when toggled */
+.nav-links.show {
+    display: flex;
+}
+
+/* Main content */
 main {
     max-width: 900px;
     margin: 20px auto;
     padding: 10px;
     display: grid;
-    /* Use CSS Grid */
     grid-template-columns: 1fr;
-    /* One column for small screens */
     gap: 20px;
-    /* Space between sections */
 }
-
 
 /* Title container */
 .title-container {
@@ -111,7 +170,6 @@ main {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .card h2 {
@@ -134,4 +192,58 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .ham-menu {
+        display: block;
+        /* Show on smaller screens */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+    background-color: rgb(34, 37, 49);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active {
+    right: 0;
 }
