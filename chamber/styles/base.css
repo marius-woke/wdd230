@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: #FFF;
+    --color2: #003366;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+}
+
+
+.logo p {
+    font-size: 1em;
+    /* Reduce font size */
+    letter-spacing: 1px;
+    /* Reduce letter spacing */
+}
+
+.logo {
+    justify-content: space-between;
+    /* Ensure enough space for both elements */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    /* Change color when hovered (optional) */
+}
+
+.open-menu {
+    margin-left: auto;
+    /* Move the hamburger menu to the far right */
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu li {
+    margin-top: 40px;
+}
+
+.menu li a {
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.menu {
+    right: 0;
+}
+
+/* Ensure the body and html don't have extra margins */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set general font and background color for the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Logo styling */
+.logo img {
+    border-radius: 5%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid white;
+}
+
+/* Full-width header layout */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 10px 0;
+}
+
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero .cta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Content section */
+main {
+    padding: 20px;
+}
+
+
+.events-weather {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#current-events,
+#weather {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.spot {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #8cdaee;
+    /* Blue text */
+
+    /* Text glow effect */
+    text-shadow: 0 0 10px rgba(48, 60, 230, 1),
+        /* Strong blue glow */
+        0 0 20px rgba(48, 60, 230, 0.8),
+        /* Lighter outer blue glow */
+        0 0 30px rgba(48, 60, 230, 0.7),
+        /* Even lighter */
+        0 0 40px rgba(255, 255, 255, 0.8);
+    /* White outer glow */
+}
+
+
+
+.spotlights {
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+
+#company-spotlights {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.spotlight {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.spotlight h4 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #003366;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.spotlight p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.spotlight a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.spotlight a:hover {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+}
+
+.footer-logo-text {
+    display: flex;
+    align-items: center;
+    /* Keeps logo and text aligned vertically */
+    text-align: center;
+    color: #ccc;
+    flex: 1;
+}
+
+.footer-logo-text img {
+    width: 50px;
+    /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid white;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+
+.footer-content {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-info,
+.footer-links {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-links {
+    color: #ccc;
+    font-size: 0.85em;
+}
+
+.footer-links .author {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.footer-links .project {
+    color: #fff;
+}
