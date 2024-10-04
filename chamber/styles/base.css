@@ -6,7 +6,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    --color1: #FFF;
+    --color1: #fdf8f8;
     --color2: #003366;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .social-icons a {
-    color: #fff;
+    color: #fdf8f8;
     font-size: 1.5em;
     margin-right: 10px;
     transition: color 0.3s ease;
