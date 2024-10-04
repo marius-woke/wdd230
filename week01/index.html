@@ -16,7 +16,8 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="images/profile_pic.jpg" alt="Ekwulonu Marius Woke Profile Image" class="profile-pic">
+            <img src="images/profile_pic.webp" alt="Ekwulonu Marius Woke Profile Image" class="profile-pic"
+                loading="lazy">
             <div class="header-text">
                 <h1>Ekwulonu Marius Woke</h1>
             </div>
@@ -24,18 +25,23 @@
     </header>
 
     <nav>
-        <div class="ham-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links">
+        <a id="menu" href="#"></a>
+        <ul class="navigation">
             <li><a href="#home">Home</a></li>
             <li><a href="chamber/index.html">Chamber</a></li>
             <li><a href="chamber_site_plan.html">Site Plan</a></li>
             <li><a href="#contact">Form</a></li>
         </ul>
     </nav>
+    <div class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-large.webp" alt="hero photos" width="500" height="250" loading="lazy">
+        </picture>
+        <span>Washington DC Temple</span>
+
+    </div>
 
     <main>
         <div class="title-container">
@@ -55,9 +61,14 @@
         <section class="card">
             <h2>Information</h2>
             <p>Weather: 🌞 Sunny, 75°F</p>
-            <p>Page Visits: 15</p>
+            <p><span class="label">Page Visits: </span><span class="visits"></span></p>
         </section>
     </main>
+    <div class="map-container">
+        <iframe class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89697.10088633152!2d3.2391677994432295!3d6.510384318779865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1728065556906!5m2!1sen!2sus"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     <footer>
         <p>© <span id="currentYear"></span>🌸 Ekwulonu Marius Woke 🌸 Rexburg, Idaho, USA</p>
