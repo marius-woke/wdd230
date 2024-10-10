@@ -36,7 +36,7 @@
                     </div>
                     <input type='checkbox' id='check' />
                     <span class="menu">
-                        <li><a href="">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="discover.html">Discover</a></li>
                         <li><a href="">Directory</a></li>
                         <li><a href="">Join</a></li>
@@ -47,51 +47,68 @@
             </ul>
         </nav>
     </header>
+    <!-- Main Content Area -->
+    <main class="discover-container">
+        <!-- Sidebar with Grid -->
+        <aside class="sidebar">
+            <h2>About Our Community</h2>
+            <p>Welcome to our thriving and vibrant community, home to local businesses, cultural landmarks, and exciting
+                events.</p>
 
-    <main>
-        <div class="hero">
-            <img src="images/community.jpg" alt="Scenic view of the community">
-            <a href="join.html" class="cta">Join the Chamber</a>
-        </div>
-        <div class="events-weather">
-            <section id="current-events">
-                <h3>Events</h3>
-                <hr>
-                <p><strong>Ribbon Cutting - The Diamond Shack</strong><br>
-                    Join us for the grand opening of The Diamond Shack, Thursday at 1:00 p.m.</p>
-            </section>
+            <!-- Community Statistics Section -->
+            <h3>Key Community Statistics</h3>
+            <ul class="community-stats">
+                <li><strong>Population:</strong> 45,000+</li>
+                <li><strong>Local Businesses:</strong> 500+</li>
+                <li><strong>Parks and Recreation Areas:</strong> 10</li>
+                <li><strong>Annual Events:</strong> 15+</li>
+            </ul>
 
-            <section id="weather">
-                <h3>Weather</h3>
-                <hr>
-                <div class="weather-card">
-                    <p>33°C Partly Cloudy</p>
-                    <p>Humidity: 35%</p>
-                    <p>Wind Chill: N/A</p>
-                </div>
-            </section>
-        </div>
+            <!-- Major Attractions Section -->
+            <h3>Major Attractions</h3>
+            <p>Our community boasts a rich cultural history and numerous attractions that bring visitors from all over.
+                Some of the highlights include:</p>
+            <ul class="community-attractions">
+                <li>The Historic Downtown Museum</li>
+                <li>Annual Food and Music Festival</li>
+                <li>The Community Arts Center</li>
+            </ul>
 
-        <h3 class="spot">Member Spotlights</h3>
+            <h3>Calendar</h3>
+            <div id="calendar"></div>
+        </aside>
 
-        <section id="company-spotlights">
-            <div class="spotlights">
-                <div class="spotlight">
-                    <h4>Thankful Transport</h4>
-                    <p>"We get it there for you!"<br> <a href="#">Website</a></p>
-                </div>
-                <div class="spotlight">
-                    <h4>Code Primera</h4>
-                    <p>After school coding!<br> <a href="#">Website</a></p>
-                </div>
-                <div class="spotlight">
-                    <h4>Build A Treefort</h4>
-                    <p>Over 1000 Plans!<br> <a href="#">Website</a></p>
-                </div>
+        <!-- Main Content Area for Images -->
+        <section class="image-gallery">
+            <h2>Local Photos</h2>
+            <div class="gallery">
+                <figure>
+                    <img data-src="images/chamber2.webp" alt="Caption 1" class="lazy">
+                    <figcaption>Symbol of e-commerce and digital transactions.</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/chamber3.webp" alt="Caption 2" class="lazy">
+                    <figcaption> Representation of labor standards and wage regulation.</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/chamber4.webp" alt="Caption 3" class="lazy">
+                    <figcaption>Digital engagement through mobile technology.</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/chamber5.webp" alt="Caption 4" class="lazy">
+                    <figcaption>Award for achievement and excellence.</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/chamber6.webp" alt="Caption 5" class="lazy">
+                    <figcaption>Architectural design of a commercial building.</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/chamber7.webp" alt="Caption 6" class="lazy">
+                    <figcaption>Historical publication from American print history.</figcaption>
+                </figure>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-content">
             <div class="footer-logo-text">
@@ -112,6 +129,8 @@
     </footer>
 
     <script src="scripts/getDate.js"></script>
+    <script src="scripts/lazyLoad.js"></script>
+    <script src="scripts/calendar.js"></script>
 </body>
 
 </html>
