@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chamber of Commerce website by Joseph Kamara. Learn more about the Chamber, join us, and explore current events and companies in the community.">
+    <meta property="og:title" content="Chamber of Commerce - Join Us!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/hero-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <link rel="icon" href="images/favico.ico" type="image/x-icon">
+    <title>Chamber of Commerce - Join Us!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 611px)">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class='nav-bar'>
+                    <div class='logo'><a href='#'><img src='images/profile_pic.jpg' alt="marius logo"></a>
+                        <p>Marius Chamber of Commerce</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="">Directory</a></li>
+                        <li><a href="">Join</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="custom-form" method="GET" action="record.html">
+            <h1>Form Submission</h1>
+
+            <!-- Username -->
+            <label for="username">Username</label>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <!-- Password -->
+            <label for="password">Password</label>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required
+                    pattern="[a-zA-Z0-9]{8,}"
+                    title="Password must be at least 8 characters long and only alpha-numeric">
+            </div>
+
+            <!-- Confirm Password -->
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password"
+                    required>
+            </div>
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Enter your BYU-I email" required
+                    pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
+                    title="Please enter a valid email address from the byui.edu domain">
+            </div>
+
+            <!-- Page Rating -->
+            <label for="rating">Page Rating</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5"
+                oninput="document.getElementById('rating-value').textContent = this.value">
+            <span class="rating-value">Rating: <span id="rating-value">5</span></span>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+
+            <div class="register">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-text">
+                <img src="images/profile_pic.jpg" alt="Marius Chamber of Commerce Logo">
+                <p>Marius Chamber of Commerce<br>156 West 4th South Rexburg, Idaho 83440</p>
+            </div>
+            <div class="contact-info">
+
+                <p>Email: <a href="wok22002@byui.edu">wok22002@byui.edu</a> <br>Phone: +208 380-1444</p>
+                <p><a href="#">Location Map</a></p>
+            </div>
+            <div class="footer-links">
+                <p>&copy;2024 Marius Chamber</p>
+                <p><span class="author">Ekwulonu Marius Woke</span> | <span class="project">WDD 230 Project</span></p>
+                <p id="lastModified">Last modified: <span id="modifiedDate"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/getDate.js"></script>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
