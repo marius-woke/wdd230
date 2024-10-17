@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chamber of Commerce website by Joseph Kamara. Learn more about the Chamber, join us, and explore current events and companies in the community.">
+    <meta property="og:title" content="Chamber of Commerce - Join Us!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/hero-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <link rel="icon" href="images/favico.ico" type="image/x-icon">
+    <title>Chamber of Commerce - Join Us!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 611px)">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/ham.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src='images/profile_pic.jpg' alt="Marius logo">
+                <p>Marius Chamber of Commerce</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="discover.html" class="nav-link">Discover</a>
+                </li>
+                <li class="nav-item">
+                    <a href="directory.html" class="nav-link">Directory</a>
+                </li>
+                <li class="nav-item">
+                    <a href="join.html" class="nav-link">Join</a>
+                </li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form class="custom-form" method="GET" action="record.html">
+                <h1>Form Submission</h1>
+
+                <!-- First Name -->
+                <label for="first-name">First Name</label>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+
+                <!-- Last Name -->
+                <label for="last-name">Last Name</label>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+
+                <!-- Title/Position -->
+                <label for="title">Title/Position</label>
+                <div class="input-container">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="title" name="title" placeholder="Enter your title/position"
+                        pattern="[a-zA-Z\s-]{7,}"
+                        title="Title must be at least 7 characters long and only contain letters, hyphens, and spaces">
+                </div>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="example@byui.edu" required
+                        pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
+                        title="Please enter a valid email address from the byui.edu domain">
+                </div>
+
+                <!-- Mobile Phone -->
+                <label for="phone">Mobile Phone</label>
+                <div class="input-container">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your mobile phone number" required>
+                </div>
+
+                <!-- Business/Organization Name -->
+                <label for="organization">Business/Organization Name</label>
+                <div class="input-container">
+                    <i class="fas fa-building"></i>
+                    <input type="text" id="organization" name="organization" placeholder="Enter your organization name"
+                        required>
+                </div>
+                <label for="membership">Membership Level</label>
+                <div class="input-container">
+                    <select id="membership" name="membership">
+                        <option value="NP">NP Membership (No fee)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </div>
+
+                <!-- Business/Organization Description -->
+                <label for="description">Business/Organization Description</label>
+                <div class="input-container">
+                    <textarea id="description" name="description"
+                        placeholder="Describe your business/organization"></textarea>
+                </div>
+
+                <!-- Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+
+                <div class="register">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+
+            <div class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <ul>
+                    <li><strong>NP Membership:</strong> No fee, basic access to events and resources.</li>
+                    <li><strong>Bronze Membership:</strong> Includes event discounts and basic advertising.</li>
+                    <li><strong>Silver Membership:</strong> Includes all Bronze benefits plus additional training and
+                        spotlight positions.</li>
+                    <li><strong>Gold Membership:</strong> Includes all Silver benefits plus premium advertising and
+                        exclusive event access.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-text">
+                <img src="images/profile_pic.jpg" alt="Marius Chamber of Commerce Logo">
+                <p>Marius Chamber of Commerce<br>156 West 4th South Rexburg, Idaho 83440</p>
+            </div>
+            <div class="contact-info">
+                <p>Email: <a href="wok22002@byui.edu">wok22002@byui.edu</a> <br>Phone: +208 380-1444</p>
+                <p><a href="#">Location Map</a></p>
+            </div>
+            <div class="footer-links">
+                <p>©2024 Marius Chamber</p>
+                <p><span class="author">Ekwulonu Marius Woke</span> | <span class="project">WDD 230 Project</span></p>
+                <p id="lastModified">Last modified: <span id="modifiedDate"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/getDate.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/ham.js"></script>
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+</body>
+
+</html>

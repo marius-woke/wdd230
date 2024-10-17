@@ -32,24 +32,27 @@ form.custom-form h1 {
 }
 
 /* Username and Password input fields with a light green background */
-.input-container input {
+.input-container input,
+.input-container select {
     width: 100%;
     padding: 12px 40px;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     background-color: #7ea0eb;
-    /* Set the initial background to light green */
+    /* Set the same background color */
     color: black;
     transition: background-color 0.3s ease;
 }
 
-.input-container input.error {
+.input-container input.error,
+.input-container select.error {
     background-color: lightcoral;
     /* Changes to red (lightcoral) if there is an error */
 }
 
-.input-container input::placeholder {
+.input-container input::placeholder,
+.input-container select::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -62,6 +65,41 @@ form.custom-form h1 {
     color: black;
     font-size: 18px;
 }
+
+/* Business/Organization Description textarea styling */
+textarea {
+    width: 100%;
+    /* Ensures the textarea takes the full width of the form */
+    height: 150px;
+    /* Increase the height for better visibility */
+    padding: 12px;
+    /* Add padding for better text visibility */
+    border-radius: 10px;
+    /* Match the style of other inputs */
+    border: none;
+    /* Remove border for consistency */
+    font-size: 16px;
+    /* Ensure font size is consistent with other inputs */
+    background-color: #ecf0f8;
+    /* Match the background with other inputs */
+    color: black;
+    /* Text color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Styling for valid textarea */
+textarea.valid {
+    background-color: #c8e6c9;
+    /* Light green background for valid input */
+}
+
+/* Styling for error textarea */
+textarea.error {
+    background-color: lightcoral;
+    /* Light red for errors */
+}
+
 
 /* Button styling */
 .custom-form button {

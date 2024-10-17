@@ -61,6 +61,7 @@ a {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        z-index: 1500;
     }
 
     .hamburger.active .bar:nth-child(2) {
