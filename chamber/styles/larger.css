@@ -1,38 +1,5 @@
 @media screen and (min-width: 611px) {
 
-    .menu {
-        flex-direction: row;
-        position: relative;
-        height: auto;
-        width: auto;
-        right: auto;
-    }
-
-    .menu li {
-        margin-top: 0;
-        padding-left: 30px;
-    }
-
-    .menu li a {
-        padding: 0;
-    }
-
-    .nav-bar {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        position: relative;
-        background-color: var(--color2);
-        padding: 12px 20px;
-    }
-
-    .open-menu,
-    .close-menu {
-        display: none;
-    }
-
     /* Hero image adjustments for larger screens */
     .hero img {
         width: 100vw;
@@ -118,6 +85,8 @@
         /* Adds space between the logo and the text */
     }
 
+
+
     .logo p {
         color: #fff;
         font-family: 'Roboto', sans-serif;
@@ -177,5 +146,4 @@
     .footer-links .project {
         color: #fff;
     }
-
 }
