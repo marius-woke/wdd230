@@ -1,0 +1,187 @@
+/* Form Styles (form.css) */
+
+/* Ensures that the form is styled specifically and avoids conflicts */
+form.custom-form {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin: 0 auto;
+}
+
+form.custom-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Input container to manage icons inside input fields */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Username and Password input fields with a light green background */
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #7ea0eb;
+    color: black;
+    box-sizing: border-box;
+    /* Ensure padding and borders are within the element’s width */
+    transition: background-color 0.3s ease;
+}
+
+.input-container input.error,
+.input-container select.error {
+    background-color: lightcoral;
+    /* Changes to red (lightcoral) if there is an error */
+}
+
+.input-container input::placeholder,
+.input-container select::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Icons inside input fields */
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 18px;
+}
+
+
+/* Business/Organization Description textarea styling */
+textarea {
+    width: 100%;
+    /* Ensures the textarea takes the full width of the form */
+    height: 150px;
+    /* Increase the height for better visibility */
+    padding: 12px;
+    /* Add padding for better text visibility */
+    border-radius: 10px;
+    /* Match the style of other inputs */
+    border: none;
+    /* Remove border for consistency */
+    font-size: 16px;
+    /* Ensure font size is consistent with other inputs */
+    background-color: #ecf0f8;
+    /* Match the background with other inputs */
+    color: black;
+    /* Text color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Styling for valid textarea */
+textarea.valid {
+    background-color: #c8e6c9;
+    /* Light green background for valid input */
+}
+
+/* Styling for error textarea */
+textarea.error {
+    background-color: lightcoral;
+    /* Light red for errors */
+}
+
+
+/* Button styling */
+.custom-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    background-color: #7ea0eb;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-form button:hover {
+    background-color: #34a0a4;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for links inside the form */
+.custom-form .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    color: black;
+}
+
+.custom-form .links a {
+    color: black;
+    text-decoration: none;
+}
+
+.custom-form .links a:hover {
+    text-decoration: underline;
+}
+
+.custom-form .register {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.custom-form .register a {
+    color: black;
+    text-decoration: none;
+}
+
+.custom-form .register a:hover {
+    text-decoration: underline;
+}
+
+/* Rating stars styling */
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.rating-stars i {
+    color: #FFD700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.rating-stars i:hover,
+.rating-stars i.active {
+    color: #7ea0eb;
+}
+
+
+/* Adjust for media query */
+@media screen and (min-width: 611px) {
+    form.custom-form {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .custom-form button {
+        font-size: 18px;
+        padding: 15px;
+    }
+}

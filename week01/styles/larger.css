@@ -6,7 +6,9 @@
         grid-template-columns: 1fr 1fr;
         /* Two columns on larger screens */
         gap: 20px;
+
     }
+
 
 
     /* Title container should span two columns on larger screens */
