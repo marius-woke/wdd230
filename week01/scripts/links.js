@@ -1,5 +1,5 @@
 const baseURL = "https://marius-woke.github.io/wdd230/"; // Replace with your actual GitHub URL
-const linksURL = `https://marius-woke.github.io/wdd230/week01/data/links.json`;
+const linksURL = `https://marius-woke.github.io/wdd230/week01/data/link.json`;
 
 async function getLinks() {
     try {
