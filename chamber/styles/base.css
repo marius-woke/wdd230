@@ -329,3 +329,71 @@ footer {
 .footer-links .project {
     color: #fff;
 }
+
+/* Directory container styling */
+#directory-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#directory-container.list {
+    display: block;
+}
+
+.member-card {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.member-card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.member-card h3 {
+    margin-bottom: 5px;
+}
+
+.member-card p,
+.member-card a {
+    margin: 0;
+}
+
+/* Mobile List View with stacked fields and zebra striping */
+#directory-container.list .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#directory-container.list .member-card:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Each field stacked for readability */
+.member-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.member-address,
+.member-phone,
+.member-website {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.member-website a {
+    color: #0066cc;
+    text-decoration: none;
+}

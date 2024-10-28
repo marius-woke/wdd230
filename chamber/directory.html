@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chamber of Commerce website by Joseph Kamara. Learn more about the Chamber, join us, and explore current events and companies in the community.">
+    <meta property="og:title" content="Chamber of Commerce - Join Us!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/hero-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <link rel="icon" href="images/favico.ico" type="image/x-icon">
+    <title>Chamber of Commerce - Join Us!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 611px)">
+    <link rel="stylesheet" href="styles/ham.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src='images/profile_pic.jpg' alt="Marius logo">
+                <p>Marius Chamber of Commerce</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="discover.html" class="nav-link">Discover</a>
+                </li>
+                <li class="nav-item">
+                    <a href="directory.html" class="nav-link">Directory</a>
+                </li>
+                <li class="nav-item">
+                    <a href="join.html" class="nav-link">Join</a>
+                </li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Business Directory</h1>
+        <div class="toggle-buttons">
+            <button id="grid-view" onclick="toggleView('grid')">Grid View</button>
+            <button id="list-view" onclick="toggleView('list')">List View</button>
+        </div>
+        <div id="directory-container" class="grid"></div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-text">
+                <img src="images/profile_pic.jpg" alt="Marius Chamber of Commerce Logo">
+                <p>Marius Chamber of Commerce<br>156 West 4th South Rexburg, Idaho 83440</p>
+            </div>
+            <div class="contact-info">
+
+                <p>Email: <a href="wok22002@byui.edu">wok22002@byui.edu</a> <br>Phone: +208 380-1444</p>
+                <p><a href="#">Location Map</a></p>
+            </div>
+            <div class="footer-links">
+                <p>&copy;2024 Marius Chamber</p>
+                <p><span class="author">Ekwulonu Marius Woke</span> | <span class="project">WDD 230 Project</span></p>
+                <p id="lastModified">Last modified: <span id="modifiedDate"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/getDate.js"></script>
+    <script src="scripts/ham.js"></script>
+    <script src="scripts/members.js"></script>
+</body>
+
+</html>

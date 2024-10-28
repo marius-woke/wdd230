@@ -146,4 +146,60 @@
     .footer-links .project {
         color: #fff;
     }
+
+    /* Larger screen grid layout */
+    #directory-container.grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    /* Zebra striping for list view */
+    #directory-container.list .member-card:nth-child(even) {
+        background-color: #f4f4f4;
+    }
+
+    /* Center content in each member card */
+    .member-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #directory-container.list .member-card {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 10px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    #directory-container.list .member-card:nth-child(even) {
+        background-color: #f4f4f4;
+    }
+
+    /* Column alignment */
+    .member-name {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    .member-address,
+    .member-phone,
+    .member-website {
+        font-size: 1em;
+    }
+
+    .member-website a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
 }
