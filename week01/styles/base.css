@@ -1,4 +1,17 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #2e4a6f;
+    /* Main color used for headers, buttons, etc. */
+    --secondary-color: #7ea0eb;
+    /* Secondary color for form backgrounds, highlights */
+    --font-color: #333;
+    /* General font color */
+    --background-color: #f9f9f9;
+    /* Page background color */
+}
+
 /* General page styling */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -154,6 +167,20 @@ main {
     width: 50%;
     margin: 10px auto;
 }
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.custom-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 /* Card styling */
 .card {

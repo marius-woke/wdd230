@@ -1,15 +1,40 @@
 /* Larger screen layout */
 @media (min-width: 768px) {
 
+    /* Global CSS Variables */
+    :root {
+        --primary-color: #2e4a6f;
+        /* Main color used for headers, buttons, etc. */
+        --secondary-color: #7ea0eb;
+        /* Secondary color for form backgrounds, highlights */
+        --font-color: #333;
+        /* General font color */
+        --background-color: #f9f9f9;
+        /* Page background color */
+    }
+
     /* Main layout adjustment */
     main {
         grid-template-columns: 1fr 1fr;
         /* Two columns on larger screens */
         gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 
+    .form-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
+    .custom-form {
+        max-width: 500px;
+        padding: 40px;
+        margin: 0 auto;
+    }
 
     /* Title container should span two columns on larger screens */
     .title-container {

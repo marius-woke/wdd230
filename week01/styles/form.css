@@ -1,6 +1,22 @@
-/* Form Styles (form.css) */
+:root {
+    --primary-color: #2e4a6f;
+    /* Main color for headers, buttons, etc. */
+    --secondary-color: #7ea0eb;
+    /* Secondary color for form backgrounds, highlights */
+    --font-color: #333;
+    /* General font color */
+    --background-color: #f9f9f9;
+    /* Page background color */
+    --error-color: lightcoral;
+    /* Color for error states */
+    --valid-color: #c8e6c9;
+    /* Color for valid input states */
+    --button-hover-color: #34a0a4;
+    /* Color for button hover */
+    --star-color: #FFD700;
+    /* Color for rating stars */
+}
 
-/* Ensures that the form is styled specifically and avoids conflicts */
 form.custom-form {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 30px;
@@ -14,14 +30,14 @@ form.custom-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
+    color: var(--font-color);
     margin: 0 auto;
 }
 
 form.custom-form h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: black;
+    color: var(--font-color);
 }
 
 /* Input container to manage icons inside input fields */
@@ -31,7 +47,7 @@ form.custom-form h1 {
     margin-bottom: 15px;
 }
 
-/* Username and Password input fields with a light green background */
+/* Username and Password input fields with a light background */
 .input-container input,
 .input-container select {
     width: 100%;
@@ -39,8 +55,8 @@ form.custom-form h1 {
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background-color: #7ea0eb;
-    color: black;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     box-sizing: border-box;
     /* Ensure padding and borders are within the element’s width */
     transition: background-color 0.3s ease;
@@ -48,8 +64,7 @@ form.custom-form h1 {
 
 .input-container input.error,
 .input-container select.error {
-    background-color: lightcoral;
-    /* Changes to red (lightcoral) if there is an error */
+    background-color: var(--error-color);
 }
 
 .input-container input::placeholder,
@@ -63,45 +78,30 @@ form.custom-form h1 {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: black;
+    color: var(--font-color);
     font-size: 18px;
 }
-
 
 /* Business/Organization Description textarea styling */
 textarea {
     width: 100%;
-    /* Ensures the textarea takes the full width of the form */
     height: 150px;
-    /* Increase the height for better visibility */
     padding: 12px;
-    /* Add padding for better text visibility */
     border-radius: 10px;
-    /* Match the style of other inputs */
     border: none;
-    /* Remove border for consistency */
     font-size: 16px;
-    /* Ensure font size is consistent with other inputs */
-    background-color: #ecf0f8;
-    /* Match the background with other inputs */
-    color: black;
-    /* Text color */
+    background-color: var(--background-color);
+    color: var(--font-color);
     transition: background-color 0.3s ease;
-    /* Smooth transition for background color */
 }
 
-/* Styling for valid textarea */
 textarea.valid {
-    background-color: #c8e6c9;
-    /* Light green background for valid input */
+    background-color: var(--valid-color);
 }
 
-/* Styling for error textarea */
 textarea.error {
-    background-color: lightcoral;
-    /* Light red for errors */
+    background-color: var(--error-color);
 }
-
 
 /* Button styling */
 .custom-form button {
@@ -111,14 +111,14 @@ textarea.error {
     border-radius: 20px;
     margin-top: 15px;
     font-size: 16px;
-    background-color: #7ea0eb;
-    color: black;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .custom-form button:hover {
-    background-color: #34a0a4;
+    background-color: var(--button-hover-color);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -128,11 +128,11 @@ textarea.error {
     justify-content: space-between;
     width: 100%;
     margin-top: 15px;
-    color: black;
+    color: var(--font-color);
 }
 
 .custom-form .links a {
-    color: black;
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -146,7 +146,7 @@ textarea.error {
 }
 
 .custom-form .register a {
-    color: black;
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -162,16 +162,15 @@ textarea.error {
 }
 
 .rating-stars i {
-    color: #FFD700;
+    color: var(--star-color);
     font-size: 24px;
     cursor: pointer;
 }
 
 .rating-stars i:hover,
 .rating-stars i.active {
-    color: #7ea0eb;
+    color: var(--secondary-color);
 }
-
 
 /* Adjust for media query */
 @media screen and (min-width: 611px) {
