@@ -1,0 +1,214 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #2e4a6f;
+    /* Main color used for headers, buttons, etc. */
+    --secondary-color: #7ea0eb;
+    /* Secondary color for form backgrounds, highlights */
+    --font-color: #333;
+    /* General font color */
+    --background-color: #f9f9f9;
+    /* Page background color */
+}
+
+/* General page styling */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero picture {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    font-family: 'Dancing Script'
+
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+.map-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Header container */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e4a6f;
+    padding: 20px;
+}
+
+/* Profile picture */
+header img {
+    border-radius: 5%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid white;
+}
+
+/* Header text */
+.header-text h1 {
+    font-size: 2rem;
+    color: white;
+    margin-left: 20px;
+}
+
+/* Mobile View ***************/
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
+    background-color: rgb(12, 12, 12);
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(247, 240, 240);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: white;
+    background-color: rgb(84, 165, 231);
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Title container */
+.title-container {
+    grid-column: 1;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.title-container h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.title-container hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.custom-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    background-color: #2e4a6f;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2e4a6f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
